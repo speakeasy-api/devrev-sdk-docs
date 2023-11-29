@@ -1,0 +1,31 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript PostGet.ts
+  import { SDK } from "openapi";
+
+(async() => {
+  const sdk = new SDK({
+    authToken: "",
+  });
+
+  const res = await sdk.parts.postGet({
+    id: "PROD-12345",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "part": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

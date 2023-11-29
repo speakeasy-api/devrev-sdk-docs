@@ -1,0 +1,20 @@
+{
+  "get": {
+    "title": "Get"
+  },
+  "post_get": {
+    "title": "Post Get"
+  },
+  "list": {
+    "title": "List"
+  },
+  "post_list": {
+    "title": "Post List"
+  },
+  "self": {
+    "title": "Self"
+  },
+  "post_self": {
+    "title": "Post Self"
+  }
+}

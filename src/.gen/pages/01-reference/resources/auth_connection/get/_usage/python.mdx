@@ -1,0 +1,37 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python Get.py
+  import sdk
+from sdk.models import operations
+
+s = sdk.SDK(
+    auth_token="",
+)
+
+
+res = s.auth_connection.get(id='string')
+
+if res.dev_org_auth_connections_get_response is not None:
+    # handle response
+    pass
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "auth_connection": {
+      "display_name": "string",
+      "enabled": false,
+      "id": "string",
+      "type": "waad",
+      "client_id": "string",
+      "client_secret": "string",
+      "domain": "string"
+    }
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

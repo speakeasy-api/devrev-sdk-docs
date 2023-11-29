@@ -1,0 +1,119 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python List.py
+  import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    auth_token="",
+)
+
+req = operations.ListPartsRequest(
+    created_by=[
+        'DEVU-12345',
+    ],
+    name=[
+        'string',
+    ],
+    owned_by=[
+        'DEVU-12345',
+    ],
+    parent_part_parts=[
+        'PROD-12345',
+    ],
+    type=[
+        components.PartType.PRODUCT,
+    ],
+)
+
+res = s.parts.list(req)
+
+if res.parts_list_response is not None:
+    # handle response
+    pass
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "next_cursor": "string",
+    "parts": [
+      {
+        "type": "capability",
+        "created_by": {
+          "type": "rev_user",
+          "external_ref": "string",
+          "rev_org": {
+            "type": "rev_org",
+            "display_id": "string",
+            "id": "string",
+            "display_name": "string"
+          },
+          "display_id": "string",
+          "id": "string",
+          "display_name": "string",
+          "display_picture": {
+            "display_id": "string",
+            "id": "string"
+          },
+          "email": "string",
+          "full_name": "string"
+        },
+        "created_date": "2023-01-01T12:00:00.000Z",
+        "display_id": "string",
+        "id": "string",
+        "modified_by": {
+          "type": "dev_user",
+          "display_id": "string",
+          "id": "string",
+          "display_name": "string",
+          "display_picture": {
+            "display_id": "string",
+            "id": "string"
+          },
+          "email": "string",
+          "full_name": "string"
+        },
+        "modified_date": "2023-01-01T12:00:00.000Z",
+        "artifacts": [
+          {
+            "display_id": "string",
+            "id": "string"
+          }
+        ],
+        "description": "string",
+        "name": "string",
+        "owned_by": [
+          {
+            "type": "sys_user",
+            "display_id": "string",
+            "id": "string",
+            "display_name": "string",
+            "display_picture": {
+              "display_id": "string",
+              "id": "string"
+            },
+            "email": "string",
+            "full_name": "string"
+          }
+        ],
+        "tags": [
+          {
+            "tag": {
+              "display_id": "string",
+              "id": "string",
+              "name": "string"
+            },
+            "value": "string"
+          }
+        ]
+      }
+    ],
+    "prev_cursor": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

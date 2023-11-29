@@ -1,0 +1,50 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript List.ts
+  import { SDK } from "openapi";
+import { ListMode, PartType } from "openapi/dist/models/components";
+
+(async() => {
+  const sdk = new SDK({
+    authToken: "",
+  });
+
+  const res = await sdk.parts.list({
+    createdBy: [
+      "DEVU-12345",
+    ],
+    name: [
+      "string",
+    ],
+    ownedBy: [
+      "DEVU-12345",
+    ],
+    parentPartParts: [
+      "PROD-12345",
+    ],
+    type: [
+      PartType.Feature,
+    ],
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "next_cursor": "string",
+    "parts": [
+      "string"
+    ],
+    "prev_cursor": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

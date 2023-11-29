@@ -1,0 +1,29 @@
+{
+  "create": {
+    "title": "Create"
+  },
+  "delete": {
+    "title": "Delete"
+  },
+  "export": {
+    "title": "Export"
+  },
+  "post_export": {
+    "title": "Post Export"
+  },
+  "get": {
+    "title": "Get"
+  },
+  "post_get": {
+    "title": "Post Get"
+  },
+  "list": {
+    "title": "List"
+  },
+  "post_list": {
+    "title": "Post List"
+  },
+  "update": {
+    "title": "Update"
+  }
+}

@@ -1,0 +1,39 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python Prepare.py
+  import sdk
+from sdk.models import components
+
+s = sdk.SDK(
+    auth_token="",
+)
+
+req = components.ArtifactsPrepareRequest(
+    file_name='latin_minivan.mpe',
+)
+
+res = s.artifacts.prepare(req)
+
+if res.artifacts_prepare_response is not None:
+    # handle response
+    pass
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "form_data": [
+      {
+        "key": "string",
+        "value": "string"
+      }
+    ],
+    "id": "ARTIFACT-12345",
+    "url": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

@@ -1,0 +1,23 @@
+{
+  "create": {
+    "title": "Create"
+  },
+  "delete": {
+    "title": "Delete"
+  },
+  "get": {
+    "title": "Get"
+  },
+  "post_get": {
+    "title": "Post Get"
+  },
+  "list": {
+    "title": "List"
+  },
+  "post_list": {
+    "title": "Post List"
+  },
+  "update": {
+    "title": "Update"
+  }
+}

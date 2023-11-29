@@ -1,0 +1,46 @@
+{
+  "-- guides": {
+    "title": "Guides",
+    "type": "separator"
+  },
+  "client_sdks": {
+    "title": "Client SDKs"
+  },
+  "installation": {
+    "title": "Installation"
+  },
+  "-- resources": {
+    "title": "Resources",
+    "type": "separator"
+  },
+  "artifacts": {
+    "title": "Artifacts"
+  },
+  "auth_tokens": {
+    "title": "Auth Tokens"
+  },
+  "auth_connection": {
+    "title": "Auth Connection"
+  },
+  "dev_users": {
+    "title": "Dev Users"
+  },
+  "parts": {
+    "title": "Parts"
+  },
+  "rev_orgs": {
+    "title": "Rev Orgs"
+  },
+  "tags": {
+    "title": "Tags"
+  },
+  "timeline_entries": {
+    "title": "Timeline Entries"
+  },
+  "webhooks": {
+    "title": "Webhooks"
+  },
+  "works": {
+    "title": "Works"
+  }
+}

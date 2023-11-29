@@ -1,0 +1,46 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript PostGet.ts
+  import { SDK } from "openapi";
+
+(async() => {
+  const sdk = new SDK({
+    authToken: "",
+  });
+
+  const res = await sdk.authTokens.postGet({
+    tokenId: "string",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "token": {
+      "created_by": "string",
+      "created_date": "2023-01-01T12:00:00.000Z",
+      "display_id": "string",
+      "id": "string",
+      "modified_by": "string",
+      "modified_date": "2023-01-01T12:00:00.000Z",
+      "client_id": "string",
+      "expires_at": "2023-01-01T12:00:00.000Z",
+      "issued_at": "2023-01-01T12:00:00.000Z",
+      "scopes": [
+        "string"
+      ],
+      "subject": "string",
+      "token_hint": "string"
+    }
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

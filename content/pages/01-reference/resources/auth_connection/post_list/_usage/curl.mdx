@@ -1,0 +1,27 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```bash Example Request
+  curl https://api.devrev.ai/dev-orgs.auth-connections.list \
+--header 'Content-Type: application/json' \
+--header 'Accept: application/json' \
+--header 'Authorization: '
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "auth_connections": [
+      {
+        "display_name": "string",
+        "enabled": false,
+        "id": "string",
+        "type": "social"
+      }
+    ]
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

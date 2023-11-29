@@ -1,0 +1,24 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "201"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```bash Example Request
+  curl https://api.devrev.ai/auth-tokens.create \
+--header 'Content-Type: application/json' \
+--header 'Accept: application/json' \
+--header 'Authorization: '
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "access_token": "string",
+    "client_id": "string",
+    "expires_in": 548814,
+    "refresh_token": "string",
+    "scope": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

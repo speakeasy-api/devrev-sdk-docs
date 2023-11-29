@@ -1,0 +1,33 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript Locate.ts
+  import { SDK } from "openapi";
+import { LocateArtifactsRequest } from "openapi/dist/models/operations";
+
+(async() => {
+  const sdk = new SDK({
+    authToken: "",
+  });
+const id: string = "ARTIFACT-12345";
+const version: Date = new Date("2023-01-01T12:00:00.000Z");
+
+  const res = await sdk.artifacts.locate(id, version);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "expires_at": "2023-01-01T12:00:00.000Z",
+    "url": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

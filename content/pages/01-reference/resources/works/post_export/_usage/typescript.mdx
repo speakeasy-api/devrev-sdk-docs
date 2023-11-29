@@ -1,0 +1,81 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript PostExport.ts
+  import { SDK } from "openapi";
+import { IssuePriority, TicketSeverity, WorkType } from "openapi/dist/models/components";
+
+(async() => {
+  const sdk = new SDK({
+    authToken: "",
+  });
+
+  const res = await sdk.works.postExport({
+    actualCloseDate: "string",
+    appliesToPart: [
+      "PROD-12345",
+    ],
+    createdBy: [
+      "DEVU-12345",
+    ],
+    createdDate: "string",
+    issue: {
+      priority: [
+        IssuePriority.P1,
+      ],
+      revOrgs: [
+        "REV-AbCdEfGh",
+      ],
+    },
+    modifiedDate: "string",
+    ownedBy: [
+      "DEVU-12345",
+    ],
+    stage: {
+      name: [
+        "string",
+      ],
+    },
+    tags: [
+      "TAG-12345",
+    ],
+    targetCloseDate: "string",
+    ticket: {
+      group: [
+        "string",
+      ],
+      revOrg: [
+        "REV-AbCdEfGh",
+      ],
+      severity: [
+        TicketSeverity.Medium,
+      ],
+      slaSummary: {},
+      sourceChannel: [
+        "string",
+      ],
+      surveys: {},
+    },
+    type: [
+      WorkType.Ticket,
+    ],
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "works": [
+      "string"
+    ]
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

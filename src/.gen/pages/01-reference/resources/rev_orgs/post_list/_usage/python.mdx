@@ -1,0 +1,93 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python PostList.py
+  import dateutil.parser
+import sdk
+from sdk.models import components
+
+s = sdk.SDK(
+    auth_token="",
+)
+
+req = components.RevOrgsListRequest(
+    created_by=[
+        'string',
+    ],
+    created_date=components.DateTimeFilter(
+        after=dateutil.parser.isoparse('2023-01-01T12:00:00.000Z'),
+        before=dateutil.parser.isoparse('2023-01-01T12:00:00.000Z'),
+    ),
+    external_ref=[
+        'string',
+    ],
+    modified_date=components.DateTimeFilter(
+        after=dateutil.parser.isoparse('2023-01-01T12:00:00.000Z'),
+        before=dateutil.parser.isoparse('2023-01-01T12:00:00.000Z'),
+    ),
+    sort_by=[
+        'string',
+    ],
+)
+
+res = s.rev_orgs.post_list(req)
+
+if res.rev_orgs_list_response is not None:
+    # handle response
+    pass
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "next_cursor": "string",
+    "prev_cursor": "string",
+    "rev_orgs": [
+      {
+        "description": "string",
+        "domain": "string",
+        "external_ref": "string",
+        "created_by": {
+          "type": "rev_user",
+          "external_ref": "string",
+          "rev_org": {
+            "type": "rev_org",
+            "display_id": "string",
+            "id": "string",
+            "display_name": "string"
+          },
+          "display_id": "string",
+          "id": "string",
+          "display_name": "string",
+          "display_picture": {
+            "display_id": "string",
+            "id": "string"
+          },
+          "email": "string",
+          "full_name": "string"
+        },
+        "created_date": "2023-01-01T12:00:00.000Z",
+        "display_id": "string",
+        "id": "string",
+        "modified_by": {
+          "type": "dev_user",
+          "display_id": "string",
+          "id": "string",
+          "display_name": "string",
+          "display_picture": {
+            "display_id": "string",
+            "id": "string"
+          },
+          "email": "string",
+          "full_name": "string"
+        },
+        "modified_date": "2023-01-01T12:00:00.000Z",
+        "display_name": "string"
+      }
+    ]
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

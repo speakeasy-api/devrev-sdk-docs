@@ -1,0 +1,78 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python Update.py
+  import sdk
+from sdk.models import components
+
+s = sdk.SDK(
+    auth_token="",
+)
+
+req = components.TagsUpdateRequest(
+    allowed_values=components.TagsUpdateAllowedValues(
+        set=[
+            'string',
+        ],
+    ),
+    id='TAG-12345',
+)
+
+res = s.tags.update(req)
+
+if res.tags_update_response is not None:
+    # handle response
+    pass
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "tag": {
+      "created_by": {
+        "type": "sys_user",
+        "display_id": "string",
+        "id": "string",
+        "display_name": "string",
+        "display_picture": {
+          "display_id": "string",
+          "id": "string"
+        },
+        "email": "string",
+        "full_name": "string"
+      },
+      "created_date": "2023-01-01T12:00:00.000Z",
+      "display_id": "string",
+      "id": "string",
+      "modified_by": {
+        "type": "rev_user",
+        "external_ref": "string",
+        "rev_org": {
+          "type": "rev_org",
+          "display_id": "string",
+          "id": "string",
+          "display_name": "string"
+        },
+        "display_id": "string",
+        "id": "string",
+        "display_name": "string",
+        "display_picture": {
+          "display_id": "string",
+          "id": "string"
+        },
+        "email": "string",
+        "full_name": "string"
+      },
+      "modified_date": "2023-01-01T12:00:00.000Z",
+      "allowed_values": [
+        "string"
+      ],
+      "description": "string",
+      "name": "string"
+    }
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

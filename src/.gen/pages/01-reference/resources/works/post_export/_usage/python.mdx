@@ -1,0 +1,197 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python PostExport.py
+  import dateutil.parser
+import sdk
+from sdk.models import components
+
+s = sdk.SDK(
+    auth_token="",
+)
+
+req = components.WorksExportRequest(
+    actual_close_date=components.SchemasDateTimeFilter(
+    type='string',
+    after=dateutil.parser.isoparse('2023-01-01T12:00:00.000Z'),
+    before=dateutil.parser.isoparse('2023-01-01T12:00:00.000Z'),
+),
+    applies_to_part=[
+        'PROD-12345',
+    ],
+    created_by=[
+        'DEVU-12345',
+    ],
+    created_date=components.SchemasDateTimeFilter(
+    type='string',
+    after=dateutil.parser.isoparse('2023-01-01T12:00:00.000Z'),
+    before=dateutil.parser.isoparse('2023-01-01T12:00:00.000Z'),
+),
+    issue=components.WorksFilterIssue(
+        priority=[
+            components.IssuePriority.P3,
+        ],
+        rev_orgs=[
+            'REV-AbCdEfGh',
+        ],
+    ),
+    modified_date=components.DateTimePreset(
+    type='string',
+    preset_type=components.PresetType.NEXT_N_DAYS,
+),
+    owned_by=[
+        'DEVU-12345',
+    ],
+    stage=components.StageFilter(
+        name=[
+            'string',
+        ],
+    ),
+    tags=[
+        'TAG-12345',
+    ],
+    target_close_date=components.SchemasDateTimeFilter(
+    type='string',
+    after=dateutil.parser.isoparse('2023-01-01T12:00:00.000Z'),
+    before=dateutil.parser.isoparse('2023-01-01T12:00:00.000Z'),
+),
+    ticket=components.WorksFilterTicket(
+        group=[
+            'string',
+        ],
+        rev_org=[
+            'REV-AbCdEfGh',
+        ],
+        severity=[
+            components.TicketSeverity.MEDIUM,
+        ],
+        sla_summary=components.SLASummaryFilter(),
+        source_channel=[
+            'string',
+        ],
+        surveys=components.SurveyAggregationFilter(),
+    ),
+    type=[
+        components.WorkType.ISSUE,
+    ],
+)
+
+res = s.works.post_export(req)
+
+if res.works_export_response is not None:
+    # handle response
+    pass
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "works": [
+      {
+        "type": "issue",
+        "created_by": {
+          "type": "rev_user",
+          "external_ref": "string",
+          "rev_org": {
+            "type": "rev_org",
+            "display_id": "string",
+            "id": "string",
+            "display_name": "string"
+          },
+          "display_id": "string",
+          "id": "string",
+          "display_name": "string",
+          "display_picture": {
+            "display_id": "string",
+            "id": "string"
+          },
+          "email": "string",
+          "full_name": "string"
+        },
+        "created_date": "2023-01-01T12:00:00.000Z",
+        "display_id": "string",
+        "id": "string",
+        "modified_by": {
+          "type": "sys_user",
+          "display_id": "string",
+          "id": "string",
+          "display_name": "string",
+          "display_picture": {
+            "display_id": "string",
+            "id": "string"
+          },
+          "email": "string",
+          "full_name": "string"
+        },
+        "modified_date": "2023-01-01T12:00:00.000Z",
+        "applies_to_part": {
+          "type": "enhancement",
+          "display_id": "string",
+          "id": "string",
+          "name": "string"
+        },
+        "artifacts": [
+          {
+            "display_id": "string",
+            "id": "string"
+          }
+        ],
+        "body": "string",
+        "owned_by": [
+          {
+            "type": "rev_user",
+            "external_ref": "string",
+            "rev_org": {
+              "type": "rev_org",
+              "display_id": "string",
+              "id": "string",
+              "display_name": "string"
+            },
+            "display_id": "string",
+            "id": "string",
+            "display_name": "string",
+            "display_picture": {
+              "display_id": "string",
+              "id": "string"
+            },
+            "email": "string",
+            "full_name": "string"
+          }
+        ],
+        "reported_by": [
+          {
+            "type": "dev_user",
+            "display_id": "string",
+            "id": "string",
+            "display_name": "string",
+            "display_picture": {
+              "display_id": "string",
+              "id": "string"
+            },
+            "email": "string",
+            "full_name": "string"
+          }
+        ],
+        "stage": {
+          "name": "string"
+        },
+        "tags": [
+          {
+            "tag": {
+              "display_id": "string",
+              "id": "string",
+              "name": "string"
+            },
+            "value": "string"
+          }
+        ],
+        "target_close_date": "2023-01-01T12:00:00.000Z",
+        "title": "string"
+      }
+    ]
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

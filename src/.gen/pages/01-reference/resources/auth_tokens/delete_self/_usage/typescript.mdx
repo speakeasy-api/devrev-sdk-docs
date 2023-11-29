@@ -1,0 +1,16 @@
+```typescript DeleteSelf.ts
+import { SDK } from "openapi";
+import { AuthTokenRequestedTokenType } from "openapi/dist/models/components";
+
+(async() => {
+  const sdk = new SDK({
+    authToken: "",
+  });
+
+  const res = await sdk.authTokens.deleteSelf({});
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```

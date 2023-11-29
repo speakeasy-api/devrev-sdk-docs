@@ -1,0 +1,47 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "201"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript Create.ts
+  import { SDK } from "openapi";
+import { AuthTokenGrantType, AuthTokenRequestedTokenType, AuthTokenSubjectTokenType } from "openapi/dist/models/components";
+
+(async() => {
+  const sdk = new SDK({
+    authToken: "",
+  });
+
+  const res = await sdk.authTokens.create({
+    aud: [
+      "string",
+    ],
+    revInfo: {
+      orgTraits: {},
+      userTraits: {
+        customFields: {},
+        phoneNumbers: [
+          "string",
+        ],
+      },
+    },
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "access_token": "string",
+    "client_id": "string",
+    "expires_in": 548814,
+    "refresh_token": "string",
+    "scope": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

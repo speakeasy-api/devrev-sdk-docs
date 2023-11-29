@@ -1,0 +1,123 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "201"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python Create.py
+  import dateutil.parser
+import sdk
+from sdk.models import components
+
+s = sdk.SDK(
+    auth_token="",
+)
+
+req = components.PartsCreateRequestProduct(
+    artifacts=[
+        'ARTIFACT-12345',
+    ],
+    name='string',
+    owned_by=[
+        'DEVU-12345',
+    ],
+    type=components.PartType.CAPABILITY,
+)
+
+res = s.parts.create(req)
+
+if res.parts_create_response is not None:
+    # handle response
+    pass
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "part": {
+      "type": "product",
+      "created_by": {
+        "type": "rev_user",
+        "external_ref": "string",
+        "rev_org": {
+          "type": "rev_org",
+          "display_id": "string",
+          "id": "string",
+          "display_name": "string"
+        },
+        "display_id": "string",
+        "id": "string",
+        "display_name": "string",
+        "display_picture": {
+          "display_id": "string",
+          "id": "string"
+        },
+        "email": "string",
+        "full_name": "string"
+      },
+      "created_date": "2023-01-01T12:00:00.000Z",
+      "display_id": "string",
+      "id": "string",
+      "modified_by": {
+        "type": "rev_user",
+        "external_ref": "string",
+        "rev_org": {
+          "type": "rev_org",
+          "display_id": "string",
+          "id": "string",
+          "display_name": "string"
+        },
+        "display_id": "string",
+        "id": "string",
+        "display_name": "string",
+        "display_picture": {
+          "display_id": "string",
+          "id": "string"
+        },
+        "email": "string",
+        "full_name": "string"
+      },
+      "modified_date": "2023-01-01T12:00:00.000Z",
+      "artifacts": [
+        {
+          "display_id": "string",
+          "id": "string"
+        }
+      ],
+      "description": "string",
+      "name": "string",
+      "owned_by": [
+        {
+          "type": "rev_user",
+          "external_ref": "string",
+          "rev_org": {
+            "type": "rev_org",
+            "display_id": "string",
+            "id": "string",
+            "display_name": "string"
+          },
+          "display_id": "string",
+          "id": "string",
+          "display_name": "string",
+          "display_picture": {
+            "display_id": "string",
+            "id": "string"
+          },
+          "email": "string",
+          "full_name": "string"
+        }
+      ],
+      "tags": [
+        {
+          "tag": {
+            "display_id": "string",
+            "id": "string",
+            "name": "string"
+          },
+          "value": "string"
+        }
+      ]
+    }
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

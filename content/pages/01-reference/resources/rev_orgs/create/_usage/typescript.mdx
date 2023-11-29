@@ -1,0 +1,43 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "201"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript Create.ts
+  import { SDK } from "openapi";
+import { OrgEnvironment } from "openapi/dist/models/components";
+
+(async() => {
+  const sdk = new SDK({
+    authToken: "",
+  });
+
+  const res = await sdk.revOrgs.create({
+    displayName: "string",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "rev_org": {
+      "description": "string",
+      "domain": "string",
+      "external_ref": "string",
+      "created_by": "string",
+      "created_date": "2023-01-01T12:00:00.000Z",
+      "display_id": "string",
+      "id": "string",
+      "modified_by": "string",
+      "modified_date": "2023-01-01T12:00:00.000Z",
+      "display_name": "string"
+    }
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

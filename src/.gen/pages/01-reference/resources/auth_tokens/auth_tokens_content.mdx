@@ -1,0 +1,61 @@
+import Create from "./create/create.mdx";
+import Delete from "./delete/delete.mdx";
+import Get from "./get/get.mdx";
+import PostGet from "./post_get/post_get.mdx";
+import List from "./list/list.mdx";
+import PostList from "./post_list/post_list.mdx";
+import DeleteSelf from "./delete_self/delete_self.mdx";
+import Update from "./update/update.mdx";
+
+## Auth Tokens
+
+### Available Operations
+
+* [Create](/auth_tokens/create) - Creates a JWT corresponding to the requested token type for the
+authenticated user.
+
+* [Delete](/auth_tokens/delete) - Revokes the token that matches the given token ID issued under the
+given Dev organization.
+
+* [Get](/auth_tokens/get) - Gets the token metadata corresponding to the given token ID under the
+given Dev organization.
+
+* [Post Get](/auth_tokens/post_get) - Gets the token metadata corresponding to the given token ID under the
+given Dev organization.
+
+* [List](/auth_tokens/list) - Gets the token metadata for all the tokens corresponding to the given
+token type issued for a given subject.
+
+* [Post List](/auth_tokens/post_list) - Gets the token metadata for all the tokens corresponding to the given
+token type issued for a given subject.
+
+* [Delete Self](/auth_tokens/delete_self) - Revokes all the tokens that matches the given token type created by the
+authenticated user.
+
+* [Update](/auth_tokens/update) - Updates token metadata of a token issued under a given Dev
+organization.
+
+
+---
+<Create />
+
+---
+<Delete />
+
+---
+<Get />
+
+---
+<PostGet />
+
+---
+<List />
+
+---
+<PostList />
+
+---
+<DeleteSelf />
+
+---
+<Update />

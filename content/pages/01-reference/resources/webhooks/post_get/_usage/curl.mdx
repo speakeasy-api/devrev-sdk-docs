@@ -1,0 +1,52 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```bash Example Request
+  curl https://api.devrev.ai/webhooks.get \
+--header 'Content-Type: application/json' \
+--header 'Accept: application/json' \
+--header 'Authorization: '
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "webhook": {
+      "created_by": {
+        "type": "dev_user",
+        "display_id": "string",
+        "id": "string",
+        "display_name": "string",
+        "display_picture": {
+          "display_id": "string",
+          "id": "string"
+        },
+        "email": "string",
+        "full_name": "string"
+      },
+      "created_date": "2023-01-01T12:00:00.000Z",
+      "display_id": "string",
+      "id": "string",
+      "modified_by": {
+        "type": "sys_user",
+        "display_id": "string",
+        "id": "string",
+        "display_name": "string",
+        "display_picture": {
+          "display_id": "string",
+          "id": "string"
+        },
+        "email": "string",
+        "full_name": "string"
+      },
+      "modified_date": "2023-01-01T12:00:00.000Z",
+      "event_types": [],
+      "secret": "string",
+      "url": "string"
+    }
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

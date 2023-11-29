@@ -1,0 +1,68 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python List.py
+  import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    auth_token="",
+)
+
+
+res = s.auth_tokens.list(client_id='string', requested_token_type=components.AuthTokenRequestedTokenType.URN_DEVREV_PARAMS_OAUTH_TOKEN_TYPE_SYS, subject='string')
+
+if res.auth_tokens_list_response is not None:
+    # handle response
+    pass
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "tokens": [
+      {
+        "created_by": {
+          "type": "dev_user",
+          "display_id": "string",
+          "id": "string",
+          "display_name": "string",
+          "display_picture": {
+            "display_id": "string",
+            "id": "string"
+          },
+          "email": "string",
+          "full_name": "string"
+        },
+        "created_date": "2023-01-01T12:00:00.000Z",
+        "display_id": "string",
+        "id": "string",
+        "modified_by": {
+          "type": "sys_user",
+          "display_id": "string",
+          "id": "string",
+          "display_name": "string",
+          "display_picture": {
+            "display_id": "string",
+            "id": "string"
+          },
+          "email": "string",
+          "full_name": "string"
+        },
+        "modified_date": "2023-01-01T12:00:00.000Z",
+        "client_id": "string",
+        "expires_at": "2023-01-01T12:00:00.000Z",
+        "issued_at": "2023-01-01T12:00:00.000Z",
+        "scopes": [
+          "string"
+        ],
+        "subject": "string",
+        "token_hint": "string"
+      }
+    ]
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

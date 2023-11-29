@@ -1,0 +1,30 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "400"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python Delete.py
+  import sdk
+from sdk.models import components
+
+s = sdk.SDK(
+    auth_token="",
+)
+
+req = components.DevOrgAuthConnectionsDeleteRequest(
+    id='<ID>',
+)
+
+res = s.auth_connection.delete(req)
+
+if res.status_code == 200:
+    # handle response
+    pass
+  ```
+  ---
+
+  ```json Example Response
+  {}
+  ```
+  </CH.Code>
+</WithStatusBar>

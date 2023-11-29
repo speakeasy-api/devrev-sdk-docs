@@ -1,0 +1,89 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python PostList.py
+  import sdk
+from sdk.models import components
+
+s = sdk.SDK(
+    auth_token="",
+)
+
+req = components.TimelineEntriesListRequest(
+    object='PROD-12345',
+    visibility=[
+        components.TimelineEntryVisibility.PUBLIC,
+    ],
+)
+
+res = s.timeline_entries.post_list(req)
+
+if res.timeline_entries_list_response is not None:
+    # handle response
+    pass
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "next_cursor": "string",
+    "prev_cursor": "string",
+    "timeline_entries": [
+      {
+        "type": "timeline_comment",
+        "artifacts": [
+          {
+            "display_id": "string",
+            "id": "string"
+          }
+        ],
+        "body": "string",
+        "snap_kit_body": {
+          "body": {},
+          "snap_in_action_name": "string",
+          "snap_in_id": "string"
+        },
+        "created_by": {
+          "type": "rev_user",
+          "external_ref": "string",
+          "rev_org": {
+            "type": "rev_org",
+            "display_id": "string",
+            "id": "string",
+            "display_name": "string"
+          },
+          "display_id": "string",
+          "id": "string",
+          "display_name": "string",
+          "display_picture": {
+            "display_id": "string",
+            "id": "string"
+          },
+          "email": "string",
+          "full_name": "string"
+        },
+        "created_date": "2023-01-01T12:00:00.000Z",
+        "display_id": "string",
+        "id": "string",
+        "modified_by": {
+          "type": "dev_user",
+          "display_id": "string",
+          "id": "string",
+          "display_name": "string",
+          "display_picture": {
+            "display_id": "string",
+            "id": "string"
+          },
+          "email": "string",
+          "full_name": "string"
+        },
+        "modified_date": "2023-01-01T12:00:00.000Z",
+        "object": "string"
+      }
+    ]
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

@@ -1,0 +1,38 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript Prepare.ts
+  import { SDK } from "openapi";
+
+(async() => {
+  const sdk = new SDK({
+    authToken: "",
+  });
+
+  const res = await sdk.artifacts.prepare({
+    fileName: "latin_minivan.mpe",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "form_data": [
+      {
+        "key": "string",
+        "value": "string"
+      }
+    ],
+    "id": "ARTIFACT-12345",
+    "url": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

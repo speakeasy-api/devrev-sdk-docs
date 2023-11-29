@@ -1,0 +1,37 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python PostList.py
+  import sdk
+from sdk.models import components
+
+s = sdk.SDK(
+    auth_token="",
+)
+
+req = components.Empty()
+
+res = s.auth_connection.post_list(req)
+
+if res.dev_org_auth_connections_list_response is not None:
+    # handle response
+    pass
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "auth_connections": [
+      {
+        "display_name": "string",
+        "enabled": false,
+        "id": "string",
+        "type": "social"
+      }
+    ]
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

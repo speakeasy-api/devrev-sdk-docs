@@ -1,0 +1,31 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python Locate.py
+  import dateutil.parser
+import sdk
+from sdk.models import operations
+
+s = sdk.SDK(
+    auth_token="",
+)
+
+
+res = s.artifacts.locate(id='ARTIFACT-12345', version=dateutil.parser.isoparse('2023-01-01T12:00:00.000Z'))
+
+if res.artifacts_locate_response is not None:
+    # handle response
+    pass
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "expires_at": "2023-01-01T12:00:00.000Z",
+    "url": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

@@ -1,0 +1,53 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript List.ts
+  import { SDK } from "openapi";
+import { ListMode } from "openapi/dist/models/components";
+
+(async() => {
+  const sdk = new SDK({
+    authToken: "",
+  });
+
+  const res = await sdk.tags.list({
+    name: [
+      "string",
+    ],
+    sortBy: [
+      "string",
+    ],
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "next_cursor": "string",
+    "prev_cursor": "string",
+    "tags": [
+      {
+        "created_by": "string",
+        "created_date": "2023-01-01T12:00:00.000Z",
+        "display_id": "string",
+        "id": "string",
+        "modified_by": "string",
+        "modified_date": "2023-01-01T12:00:00.000Z",
+        "allowed_values": [
+          "string"
+        ],
+        "description": "string",
+        "name": "string"
+      }
+    ]
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

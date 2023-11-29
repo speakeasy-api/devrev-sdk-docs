@@ -1,0 +1,126 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```bash Example Request
+  curl https://api.devrev.ai/works.list?applies_to_part=string%2Cstring&created_by=string%2Cstring&cursor=string&issue.priority=%2C&issue.rev_orgs=string%2Cstring&limit=645785&owned_by=string%2Cstring&stage.name=string%2Cstring&tags=string%2Cstring&ticket.group=string%2Cstring&ticket.is_spam=false&ticket.needs_response=false&ticket.rev_org=string%2Cstring&ticket.severity=%2C&ticket.source_channel=string%2Cstring&type=%2C \
+--header 'Accept: application/json' \
+--header 'Authorization: '
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "next_cursor": "string",
+    "prev_cursor": "string",
+    "works": [
+      {
+        "type": "ticket",
+        "group": {
+          "display_id": "string",
+          "id": "string"
+        },
+        "rev_org": {
+          "type": "rev_org",
+          "display_id": "string",
+          "id": "string",
+          "display_name": "string"
+        },
+        "created_by": {
+          "type": "rev_user",
+          "external_ref": "string",
+          "rev_org": {
+            "type": "rev_org",
+            "display_id": "string",
+            "id": "string",
+            "display_name": "string"
+          },
+          "display_id": "string",
+          "id": "string",
+          "display_name": "string",
+          "display_picture": {
+            "display_id": "string",
+            "id": "string"
+          },
+          "email": "string",
+          "full_name": "string"
+        },
+        "created_date": "2023-01-01T12:00:00.000Z",
+        "display_id": "string",
+        "id": "string",
+        "modified_by": {
+          "type": "sys_user",
+          "display_id": "string",
+          "id": "string",
+          "display_name": "string",
+          "display_picture": {
+            "display_id": "string",
+            "id": "string"
+          },
+          "email": "string",
+          "full_name": "string"
+        },
+        "modified_date": "2023-01-01T12:00:00.000Z",
+        "applies_to_part": {
+          "type": "enhancement",
+          "display_id": "string",
+          "id": "string",
+          "name": "string"
+        },
+        "artifacts": [
+          {
+            "display_id": "string",
+            "id": "string"
+          }
+        ],
+        "body": "string",
+        "owned_by": [
+          {
+            "type": "sys_user",
+            "display_id": "string",
+            "id": "string",
+            "display_name": "string",
+            "display_picture": {
+              "display_id": "string",
+              "id": "string"
+            },
+            "email": "string",
+            "full_name": "string"
+          }
+        ],
+        "reported_by": [
+          {
+            "type": "sys_user",
+            "display_id": "string",
+            "id": "string",
+            "display_name": "string",
+            "display_picture": {
+              "display_id": "string",
+              "id": "string"
+            },
+            "email": "string",
+            "full_name": "string"
+          }
+        ],
+        "stage": {
+          "name": "string"
+        },
+        "tags": [
+          {
+            "tag": {
+              "display_id": "string",
+              "id": "string",
+              "name": "string"
+            },
+            "value": "string"
+          }
+        ],
+        "target_close_date": "2023-01-01T12:00:00.000Z",
+        "title": "string"
+      }
+    ]
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

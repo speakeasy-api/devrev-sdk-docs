@@ -1,0 +1,31 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript Get.ts
+  import { SDK } from "openapi";
+import { GetDevOrgAuthConnectionsRequest } from "openapi/dist/models/operations";
+
+(async() => {
+  const sdk = new SDK({
+    authToken: "",
+  });
+const id: string = "string";
+
+  const res = await sdk.authConnection.get(id);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "auth_connection": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

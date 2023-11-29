@@ -1,0 +1,93 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python List.py
+  import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    auth_token="",
+)
+
+req = operations.ListDevUsersRequest(
+    email=[
+        'string',
+    ],
+    sort_by=[
+        'string',
+    ],
+    state=[
+        components.UserState.DELETED,
+    ],
+)
+
+res = s.dev_users.list(req)
+
+if res.dev_users_list_response is not None:
+    # handle response
+    pass
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "dev_users": [
+      {
+        "external_identities": [
+          {}
+        ],
+        "created_by": {
+          "type": "dev_user",
+          "display_id": "string",
+          "id": "string",
+          "display_name": "string",
+          "display_picture": {
+            "display_id": "string",
+            "id": "string"
+          },
+          "email": "string",
+          "full_name": "string"
+        },
+        "created_date": "2023-01-01T12:00:00.000Z",
+        "display_id": "string",
+        "id": "string",
+        "modified_by": {
+          "type": "rev_user",
+          "external_ref": "string",
+          "rev_org": {
+            "type": "rev_org",
+            "display_id": "string",
+            "id": "string",
+            "display_name": "string"
+          },
+          "display_id": "string",
+          "id": "string",
+          "display_name": "string",
+          "display_picture": {
+            "display_id": "string",
+            "id": "string"
+          },
+          "email": "string",
+          "full_name": "string"
+        },
+        "modified_date": "2023-01-01T12:00:00.000Z",
+        "display_name": "string",
+        "display_picture": {
+          "display_id": "string",
+          "id": "string"
+        },
+        "email": "string",
+        "full_name": "string",
+        "phone_numbers": [
+          "string"
+        ]
+      }
+    ],
+    "next_cursor": "string",
+    "prev_cursor": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

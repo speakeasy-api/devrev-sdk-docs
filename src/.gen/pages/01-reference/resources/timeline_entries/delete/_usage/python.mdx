@@ -1,0 +1,30 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python Delete.py
+  import sdk
+from sdk.models import components
+
+s = sdk.SDK(
+    auth_token="",
+)
+
+req = components.TimelineEntriesDeleteRequest(
+    id='don:core:<partition>:devo/<dev-org-id>:ticket/123:timeline_event/<timeline-event-id>',
+)
+
+res = s.timeline_entries.delete(req)
+
+if res.timeline_entries_delete_response is not None:
+    # handle response
+    pass
+  ```
+  ---
+
+  ```json Example Response
+  {}
+  ```
+  </CH.Code>
+</WithStatusBar>

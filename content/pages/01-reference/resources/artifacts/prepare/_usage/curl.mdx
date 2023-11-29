@@ -1,0 +1,27 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```bash Example Request
+  curl https://api.devrev.ai/artifacts.prepare \
+--header 'Content-Type: application/json' \
+--header 'Accept: application/json' \
+--header 'Authorization: '
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "form_data": [
+      {
+        "key": "string",
+        "value": "string"
+      }
+    ],
+    "id": "ARTIFACT-12345",
+    "url": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

@@ -1,0 +1,71 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript List.ts
+  import { SDK } from "openapi";
+import { IssuePriority, ListMode, TicketSeverity, WorkType } from "openapi/dist/models/components";
+
+(async() => {
+  const sdk = new SDK({
+    authToken: "",
+  });
+
+  const res = await sdk.works.list({
+    appliesToPart: [
+      "PROD-12345",
+    ],
+    createdBy: [
+      "DEVU-12345",
+    ],
+    issuePriority: [
+      IssuePriority.P0,
+    ],
+    issueRevOrgs: [
+      "REV-AbCdEfGh",
+    ],
+    ownedBy: [
+      "DEVU-12345",
+    ],
+    stageName: [
+      "string",
+    ],
+    tags: [
+      "TAG-12345",
+    ],
+    ticketGroup: [
+      "string",
+    ],
+    ticketRevOrg: [
+      "REV-AbCdEfGh",
+    ],
+    ticketSeverity: [
+      TicketSeverity.High,
+    ],
+    ticketSourceChannel: [
+      "string",
+    ],
+    type: [
+      WorkType.Issue,
+    ],
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "next_cursor": "string",
+    "prev_cursor": "string",
+    "works": [
+      "string"
+    ]
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

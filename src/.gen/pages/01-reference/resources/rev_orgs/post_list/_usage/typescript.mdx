@@ -1,0 +1,63 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript PostList.ts
+  import { SDK } from "openapi";
+import { ListMode } from "openapi/dist/models/components";
+
+(async() => {
+  const sdk = new SDK({
+    authToken: "",
+  });
+
+  const res = await sdk.revOrgs.postList({
+    createdBy: [
+      "string",
+    ],
+    createdDate: {
+      after: new Date("2023-01-01T12:00:00.000Z"),
+      before: new Date("2023-01-01T12:00:00.000Z"),
+    },
+    externalRef: [
+      "string",
+    ],
+    modifiedDate: {
+      after: new Date("2023-01-01T12:00:00.000Z"),
+      before: new Date("2023-01-01T12:00:00.000Z"),
+    },
+    sortBy: [
+      "string",
+    ],
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "next_cursor": "string",
+    "prev_cursor": "string",
+    "rev_orgs": [
+      {
+        "description": "string",
+        "domain": "string",
+        "external_ref": "string",
+        "created_by": "string",
+        "created_date": "2023-01-01T12:00:00.000Z",
+        "display_id": "string",
+        "id": "string",
+        "modified_by": "string",
+        "modified_date": "2023-01-01T12:00:00.000Z",
+        "display_name": "string"
+      }
+    ]
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

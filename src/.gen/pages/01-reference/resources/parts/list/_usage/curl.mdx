@@ -1,0 +1,92 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```bash Example Request
+  curl https://api.devrev.ai/parts.list?created_by=string%2Cstring&cursor=string&limit=673660&name=string%2Cstring&owned_by=string%2Cstring&parent_part.level=96098&parent_part.parts=string%2Cstring&type=%2C \
+--header 'Accept: application/json' \
+--header 'Authorization: '
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "next_cursor": "string",
+    "parts": [
+      {
+        "type": "product",
+        "created_by": {
+          "type": "sys_user",
+          "display_id": "string",
+          "id": "string",
+          "display_name": "string",
+          "display_picture": {
+            "display_id": "string",
+            "id": "string"
+          },
+          "email": "string",
+          "full_name": "string"
+        },
+        "created_date": "2023-01-01T12:00:00.000Z",
+        "display_id": "string",
+        "id": "string",
+        "modified_by": {
+          "type": "sys_user",
+          "display_id": "string",
+          "id": "string",
+          "display_name": "string",
+          "display_picture": {
+            "display_id": "string",
+            "id": "string"
+          },
+          "email": "string",
+          "full_name": "string"
+        },
+        "modified_date": "2023-01-01T12:00:00.000Z",
+        "artifacts": [
+          {
+            "display_id": "string",
+            "id": "string"
+          }
+        ],
+        "description": "string",
+        "name": "string",
+        "owned_by": [
+          {
+            "type": "rev_user",
+            "external_ref": "string",
+            "rev_org": {
+              "type": "rev_org",
+              "display_id": "string",
+              "id": "string",
+              "display_name": "string"
+            },
+            "display_id": "string",
+            "id": "string",
+            "display_name": "string",
+            "display_picture": {
+              "display_id": "string",
+              "id": "string"
+            },
+            "email": "string",
+            "full_name": "string"
+          }
+        ],
+        "tags": [
+          {
+            "tag": {
+              "display_id": "string",
+              "id": "string",
+              "name": "string"
+            },
+            "value": "string"
+          }
+        ]
+      }
+    ],
+    "prev_cursor": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

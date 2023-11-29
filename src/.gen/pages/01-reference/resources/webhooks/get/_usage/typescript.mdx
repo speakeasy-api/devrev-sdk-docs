@@ -1,0 +1,41 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript Get.ts
+  import { SDK } from "openapi";
+import { GetWebhooksRequest } from "openapi/dist/models/operations";
+
+(async() => {
+  const sdk = new SDK({
+    authToken: "",
+  });
+const id: string = "don:integration:<partition>:devo/<dev-org-id>:webhook/<webhook-id>";
+
+  const res = await sdk.webhooks.get(id);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "webhook": {
+      "created_by": "string",
+      "created_date": "2023-01-01T12:00:00.000Z",
+      "display_id": "string",
+      "id": "string",
+      "modified_by": "string",
+      "modified_date": "2023-01-01T12:00:00.000Z",
+      "event_types": [],
+      "secret": "string",
+      "url": "string"
+    }
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

@@ -1,0 +1,159 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "201"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python Create.py
+  import dateutil.parser
+import sdk
+from sdk.models import components
+
+s = sdk.SDK(
+    auth_token="",
+)
+
+req = components.WorksCreateRequestIssue(
+    applies_to_part='PROD-12345',
+    artifacts=[
+        'ARTIFACT-12345',
+    ],
+    owned_by=[
+        'DEVU-12345',
+    ],
+    reported_by=[
+        'DEVU-12345',
+    ],
+    stage=components.Empty(),
+    tags=[
+        components.Empty(),
+    ],
+    target_close_date=dateutil.parser.isoparse('2023-01-01T12:00:00.000Z'),
+    title='string',
+    type=components.WorkType.ISSUE,
+)
+
+res = s.works.create(req)
+
+if res.works_create_response is not None:
+    # handle response
+    pass
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "work": {
+      "type": "ticket",
+      "group": {
+        "display_id": "string",
+        "id": "string"
+      },
+      "rev_org": {
+        "type": "rev_org",
+        "display_id": "string",
+        "id": "string",
+        "display_name": "string"
+      },
+      "created_by": {
+        "type": "dev_user",
+        "display_id": "string",
+        "id": "string",
+        "display_name": "string",
+        "display_picture": {
+          "display_id": "string",
+          "id": "string"
+        },
+        "email": "string",
+        "full_name": "string"
+      },
+      "created_date": "2023-01-01T12:00:00.000Z",
+      "display_id": "string",
+      "id": "string",
+      "modified_by": {
+        "type": "rev_user",
+        "external_ref": "string",
+        "rev_org": {
+          "type": "rev_org",
+          "display_id": "string",
+          "id": "string",
+          "display_name": "string"
+        },
+        "display_id": "string",
+        "id": "string",
+        "display_name": "string",
+        "display_picture": {
+          "display_id": "string",
+          "id": "string"
+        },
+        "email": "string",
+        "full_name": "string"
+      },
+      "modified_date": "2023-01-01T12:00:00.000Z",
+      "applies_to_part": {
+        "type": "capability",
+        "display_id": "string",
+        "id": "string",
+        "name": "string"
+      },
+      "artifacts": [
+        {
+          "display_id": "string",
+          "id": "string"
+        }
+      ],
+      "body": "string",
+      "owned_by": [
+        {
+          "type": "dev_user",
+          "display_id": "string",
+          "id": "string",
+          "display_name": "string",
+          "display_picture": {
+            "display_id": "string",
+            "id": "string"
+          },
+          "email": "string",
+          "full_name": "string"
+        }
+      ],
+      "reported_by": [
+        {
+          "type": "rev_user",
+          "external_ref": "string",
+          "rev_org": {
+            "type": "rev_org",
+            "display_id": "string",
+            "id": "string",
+            "display_name": "string"
+          },
+          "display_id": "string",
+          "id": "string",
+          "display_name": "string",
+          "display_picture": {
+            "display_id": "string",
+            "id": "string"
+          },
+          "email": "string",
+          "full_name": "string"
+        }
+      ],
+      "stage": {
+        "name": "string"
+      },
+      "tags": [
+        {
+          "tag": {
+            "display_id": "string",
+            "id": "string",
+            "name": "string"
+          },
+          "value": "string"
+        }
+      ],
+      "target_close_date": "2023-01-01T12:00:00.000Z",
+      "title": "string"
+    }
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

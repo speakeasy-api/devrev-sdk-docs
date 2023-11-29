@@ -1,0 +1,17 @@
+```typescript Delete.ts
+import { SDK } from "openapi";
+
+(async() => {
+  const sdk = new SDK({
+    authToken: "",
+  });
+
+  const res = await sdk.authConnection.delete({
+    id: "<ID>",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```

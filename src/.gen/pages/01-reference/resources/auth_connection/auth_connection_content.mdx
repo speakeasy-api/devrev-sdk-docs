@@ -1,0 +1,67 @@
+import Create from "./create/create.mdx";
+import Delete from "./delete/delete.mdx";
+import Get from "./get/get.mdx";
+import PostGet from "./post_get/post_get.mdx";
+import List from "./list/list.mdx";
+import PostList from "./post_list/post_list.mdx";
+import Toggle from "./toggle/toggle.mdx";
+import Update from "./update/update.mdx";
+
+## Auth Connection
+
+### Available Operations
+
+* [Create](/auth_connection/create) - Creates a new enterprise authentication connection for a Dev
+organization. This authentication connection will not be enabled by
+default for the organization and the user will need to explicitly
+enable this. Keep in mind that at a time, only one authentication
+connection can be enabled for a Dev organization. At present, only 5
+enterprise connections can be created by an organization.
+
+* [Delete](/auth_connection/delete) - Deletes an authentication connection. Only enterprise connections which
+are explicitly set up for a Dev organization can be deleted. Default
+connections can not be deleted using this method.
+
+* [Get](/auth_connection/get) - Retrieves the details for an authentication connection.
+* [Post Get](/auth_connection/post_get) - Retrieves the details for an authentication connection.
+* [List](/auth_connection/list) - Lists all the authentication connections available for a Dev
+organization. This list will include both social and enterprise
+connections which are either available by default or are explicitly
+created by the user.
+
+* [Post List](/auth_connection/post_list) - Lists all the authentication connections available for a Dev
+organization. This list will include both social and enterprise
+connections which are either available by default or are explicitly
+created by the user.
+
+* [Toggle](/auth_connection/toggle) - Enable or disable an authentication connection for a Dev organization.
+Currently, only 1 authentication connection can be enabled at a time.
+When a new authentication connection is enabled, the connection which
+is currently enabled for the Dev organization is automatically
+disabled.
+
+* [Update](/auth_connection/update) - Updates an authentication connection.
+
+---
+<Create />
+
+---
+<Delete />
+
+---
+<Get />
+
+---
+<PostGet />
+
+---
+<List />
+
+---
+<PostList />
+
+---
+<Toggle />
+
+---
+<Update />

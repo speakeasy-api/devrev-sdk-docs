@@ -1,0 +1,162 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python Export.py
+  import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    auth_token="",
+)
+
+req = operations.ExportWorksRequest(
+    applies_to_part=[
+        'PROD-12345',
+    ],
+    created_by=[
+        'DEVU-12345',
+    ],
+    issue_priority=[
+        components.IssuePriority.P2,
+    ],
+    issue_rev_orgs=[
+        'REV-AbCdEfGh',
+    ],
+    owned_by=[
+        'DEVU-12345',
+    ],
+    stage_name=[
+        'string',
+    ],
+    tags=[
+        'TAG-12345',
+    ],
+    ticket_group=[
+        'string',
+    ],
+    ticket_rev_org=[
+        'REV-AbCdEfGh',
+    ],
+    ticket_severity=[
+        components.TicketSeverity.BLOCKER,
+    ],
+    ticket_source_channel=[
+        'string',
+    ],
+    type=[
+        components.WorkType.ISSUE,
+    ],
+)
+
+res = s.works.export(req)
+
+if res.works_export_response is not None:
+    # handle response
+    pass
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "works": [
+      {
+        "type": "issue",
+        "created_by": {
+          "type": "rev_user",
+          "external_ref": "string",
+          "rev_org": {
+            "type": "rev_org",
+            "display_id": "string",
+            "id": "string",
+            "display_name": "string"
+          },
+          "display_id": "string",
+          "id": "string",
+          "display_name": "string",
+          "display_picture": {
+            "display_id": "string",
+            "id": "string"
+          },
+          "email": "string",
+          "full_name": "string"
+        },
+        "created_date": "2023-01-01T12:00:00.000Z",
+        "display_id": "string",
+        "id": "string",
+        "modified_by": {
+          "type": "dev_user",
+          "display_id": "string",
+          "id": "string",
+          "display_name": "string",
+          "display_picture": {
+            "display_id": "string",
+            "id": "string"
+          },
+          "email": "string",
+          "full_name": "string"
+        },
+        "modified_date": "2023-01-01T12:00:00.000Z",
+        "applies_to_part": {
+          "type": "feature",
+          "display_id": "string",
+          "id": "string",
+          "name": "string"
+        },
+        "artifacts": [
+          {
+            "display_id": "string",
+            "id": "string"
+          }
+        ],
+        "body": "string",
+        "owned_by": [
+          {
+            "type": "dev_user",
+            "display_id": "string",
+            "id": "string",
+            "display_name": "string",
+            "display_picture": {
+              "display_id": "string",
+              "id": "string"
+            },
+            "email": "string",
+            "full_name": "string"
+          }
+        ],
+        "reported_by": [
+          {
+            "type": "dev_user",
+            "display_id": "string",
+            "id": "string",
+            "display_name": "string",
+            "display_picture": {
+              "display_id": "string",
+              "id": "string"
+            },
+            "email": "string",
+            "full_name": "string"
+          }
+        ],
+        "stage": {
+          "name": "string"
+        },
+        "tags": [
+          {
+            "tag": {
+              "display_id": "string",
+              "id": "string",
+              "name": "string"
+            },
+            "value": "string"
+          }
+        ],
+        "target_close_date": "2023-01-01T12:00:00.000Z",
+        "title": "string"
+      }
+    ]
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

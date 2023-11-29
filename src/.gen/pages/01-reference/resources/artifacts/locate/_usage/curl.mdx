@@ -1,0 +1,20 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```bash Example Request
+  curl https://api.devrev.ai/artifacts.locate?id=ARTIFACT-12345&version=2023-01-01T12%3A00%3A00.000Z \
+--header 'Accept: application/json' \
+--header 'Authorization: '
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "expires_at": "2023-01-01T12:00:00.000Z",
+    "url": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

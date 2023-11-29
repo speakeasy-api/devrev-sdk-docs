@@ -1,0 +1,47 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "201"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python Create.py
+  import sdk
+from sdk.models import components
+
+s = sdk.SDK(
+    auth_token="",
+)
+
+req = components.AuthTokensCreateRequest(
+    aud=[
+        'string',
+    ],
+    rev_info=components.AuthTokensRevInfo(
+        org_traits=components.AuthTokensOrgTraits(),
+        user_traits=components.AuthTokensUserTraits(
+            custom_fields=components.CustomFields(),
+            phone_numbers=[
+                'string',
+            ],
+        ),
+    ),
+)
+
+res = s.auth_tokens.create(req)
+
+if res.auth_tokens_create_response is not None:
+    # handle response
+    pass
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "access_token": "string",
+    "client_id": "string",
+    "expires_in": 548814,
+    "refresh_token": "string",
+    "scope": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>
