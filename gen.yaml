@@ -42,6 +42,7 @@ python:
   maxMethodParams: 4
   outputModelSuffix: output
   packageName: openapi
+  published: true
 typescript:
   version: 0.0.1
   author: Speakeasy
