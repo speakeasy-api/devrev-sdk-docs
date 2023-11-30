@@ -11,14 +11,14 @@ primaryColor:
 # The logo to display, based on current theme.
 # You can use a relative path or a URL. If you use a relative path, make sure the file is in the public folder.
 logo:
-  dark: /devrev.svg
+  dark: /devrev-dark.svg
   light: /devrev.svg
   # The link to go to when clicking the logo
   link: https://devrev.ai/
 
 # The favicon to display. You can use a relative path or a URL.
 # If you use a relative path, make sure the file is in the public folder.
-favicon: /favicon.png
+favicon: /devrev-favicon.ico
 
 # The code theme to use for usage snippets. See https://codehike.org/docs/themes for a list of themes.
 codeTheme: material-darker
