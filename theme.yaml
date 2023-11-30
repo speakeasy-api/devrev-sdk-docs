@@ -6,7 +6,7 @@ title: Devrev SDK and API Docs
 # You can provide a light and dark color, in case your primary color doesn't show up well in both themes.
 primaryColor:
   dark: rgb(4,4,4)
-  light: rgb(255,255,255)
+  light: rgba(52, 61, 234)
 
 # The logo to display, based on current theme.
 # You can use a relative path or a URL. If you use a relative path, make sure the file is in the public folder.
