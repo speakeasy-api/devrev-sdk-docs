@@ -6,24 +6,23 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   ```python PostList.py
   import dateutil.parser
 import sdk
-from sdk.models import components
 
 s = sdk.SDK(
     auth_token="",
 )
 
-req = components.RevOrgsListRequest(
+req = sdk.RevOrgsListRequest(
     created_by=[
         'string',
     ],
-    created_date=components.DateTimeFilter(
+    created_date=sdk.DateTimeFilter(
         after=dateutil.parser.isoparse('2023-01-01T12:00:00.000Z'),
         before=dateutil.parser.isoparse('2023-01-01T12:00:00.000Z'),
     ),
     external_ref=[
         'string',
     ],
-    modified_date=components.DateTimeFilter(
+    modified_date=sdk.DateTimeFilter(
         after=dateutil.parser.isoparse('2023-01-01T12:00:00.000Z'),
         before=dateutil.parser.isoparse('2023-01-01T12:00:00.000Z'),
     ),

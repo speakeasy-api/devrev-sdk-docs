@@ -5,13 +5,12 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   <CH.Code>
   ```python Delete.py
   import sdk
-from sdk.models import components
 
 s = sdk.SDK(
     auth_token="",
 )
 
-req = components.TimelineEntriesDeleteRequest(
+req = sdk.TimelineEntriesDeleteRequest(
     id='don:core:<partition>:devo/<dev-org-id>:ticket/123:timeline_event/<timeline-event-id>',
 )
 

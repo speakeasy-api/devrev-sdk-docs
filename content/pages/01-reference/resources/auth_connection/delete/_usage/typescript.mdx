@@ -1,7 +1,7 @@
 ```typescript Delete.ts
-import { SDK } from "openapi";
+import { SDK } from "devrev/sdk";
 
-(async() => {
+async function run() {
   const sdk = new SDK({
     authToken: "",
   });
@@ -13,5 +13,7 @@ import { SDK } from "openapi";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```

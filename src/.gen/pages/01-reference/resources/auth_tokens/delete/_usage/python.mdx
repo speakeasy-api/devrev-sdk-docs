@@ -5,13 +5,12 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   <CH.Code>
   ```python Delete.py
   import sdk
-from sdk.models import components
 
 s = sdk.SDK(
     auth_token="",
 )
 
-req = components.AuthTokensDeleteRequest()
+req = sdk.AuthTokensDeleteRequest()
 
 res = s.auth_tokens.delete(req)
 

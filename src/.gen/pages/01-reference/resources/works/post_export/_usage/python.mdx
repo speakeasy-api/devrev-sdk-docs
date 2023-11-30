@@ -6,14 +6,13 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   ```python PostExport.py
   import dateutil.parser
 import sdk
-from sdk.models import components
 
 s = sdk.SDK(
     auth_token="",
 )
 
-req = components.WorksExportRequest(
-    actual_close_date=components.SchemasDateTimeFilter(
+req = sdk.WorksExportRequest(
+    actual_close_date=sdk.SchemasDateTimeFilter(
     type='string',
     after=dateutil.parser.isoparse('2023-01-01T12:00:00.000Z'),
     before=dateutil.parser.isoparse('2023-01-01T12:00:00.000Z'),
@@ -24,27 +23,27 @@ req = components.WorksExportRequest(
     created_by=[
         'DEVU-12345',
     ],
-    created_date=components.SchemasDateTimeFilter(
+    created_date=sdk.SchemasDateTimeFilter(
     type='string',
     after=dateutil.parser.isoparse('2023-01-01T12:00:00.000Z'),
     before=dateutil.parser.isoparse('2023-01-01T12:00:00.000Z'),
 ),
-    issue=components.WorksFilterIssue(
+    issue=sdk.WorksFilterIssue(
         priority=[
-            components.IssuePriority.P3,
+            sdk.IssuePriority.P3,
         ],
         rev_orgs=[
             'REV-AbCdEfGh',
         ],
     ),
-    modified_date=components.DateTimePreset(
+    modified_date=sdk.DateTimePreset(
     type='string',
-    preset_type=components.PresetType.NEXT_N_DAYS,
+    preset_type=sdk.PresetType.NEXT_N_DAYS,
 ),
     owned_by=[
         'DEVU-12345',
     ],
-    stage=components.StageFilter(
+    stage=sdk.StageFilter(
         name=[
             'string',
         ],
@@ -52,12 +51,12 @@ req = components.WorksExportRequest(
     tags=[
         'TAG-12345',
     ],
-    target_close_date=components.SchemasDateTimeFilter(
+    target_close_date=sdk.SchemasDateTimeFilter(
     type='string',
     after=dateutil.parser.isoparse('2023-01-01T12:00:00.000Z'),
     before=dateutil.parser.isoparse('2023-01-01T12:00:00.000Z'),
 ),
-    ticket=components.WorksFilterTicket(
+    ticket=sdk.WorksFilterTicket(
         group=[
             'string',
         ],
@@ -65,16 +64,16 @@ req = components.WorksExportRequest(
             'REV-AbCdEfGh',
         ],
         severity=[
-            components.TicketSeverity.MEDIUM,
+            sdk.TicketSeverity.MEDIUM,
         ],
-        sla_summary=components.SLASummaryFilter(),
+        sla_summary=sdk.SLASummaryFilter(),
         source_channel=[
             'string',
         ],
-        surveys=components.SurveyAggregationFilter(),
+        surveys=sdk.SurveyAggregationFilter(),
     ),
     type=[
-        components.WorkType.ISSUE,
+        sdk.WorkType.ISSUE,
     ],
 )
 

@@ -5,15 +5,14 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   <CH.Code>
   ```python Update.py
   import sdk
-from sdk.models import components
 
 s = sdk.SDK(
     auth_token="",
 )
 
-req = components.SchemasAuthConnectionOptionsSamlAuthConnectionOptionsSaml(
+req = sdk.SchemasAuthConnectionOptionsSamlAuthConnectionOptionsSaml(
     id='<ID>',
-    type=components.SchemasAuthConnectionOptionsSamlType2.NONE,
+    type=sdk.SchemasAuthConnectionOptionsSamlType2.NONE,
 )
 
 res = s.auth_connection.update(req)

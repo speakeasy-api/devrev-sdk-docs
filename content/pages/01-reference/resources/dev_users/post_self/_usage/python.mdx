@@ -5,13 +5,12 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   <CH.Code>
   ```python PostSelf.py
   import sdk
-from sdk.models import components
 
 s = sdk.SDK(
     auth_token="",
 )
 
-req = components.DevUsersSelfRequest()
+req = sdk.DevUsersSelfRequest()
 
 res = s.dev_users.post_self(req)
 
