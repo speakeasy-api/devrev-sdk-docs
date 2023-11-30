@@ -38,30 +38,32 @@ python:
   imports:
     option: openapi
     paths:
-      callbacks: models/callbacks
-      errors: models/errors
-      operations: models/operations
-      shared: models/components
-      webhooks: models/webhooks
+      callbacks: ""
+      errors: ""
+      operations: ""
+      shared: ""
+      webhooks: ""
   inputModelSuffix: input
   maxMethodParams: 4
   outputModelSuffix: output
   packageName: openapi
   published: true
+  installationURL: https://github.com/speakeasy-sdks/devrev-sample-sdk
 typescript:
-  version: 0.0.1
-  author: Speakeasy
+  version: 0.2.0
+  author: devrev
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
   imports:
     option: openapi
     paths:
-      callbacks: models/callbacks
-      errors: models/errors
-      operations: models/operations
-      shared: models/components
-      webhooks: models/webhooks
+      callbacks: ""
+      errors: ""
+      operations: ""
+      shared: ""
+      webhooks: ""
   inputModelSuffix: input
+  installationURL: https://github.com/speakeasy-sdks/devrev-sample-sdk
   maxMethodParams: 4
   outputModelSuffix: output
-  packageName: openapi
+  packageName: devrev/sdk
