@@ -4,8 +4,7 @@ import WithStatusBar from '@/src/components/WithStatusBar';
 <WithStatusBar statusItems={[["Status", "201"], ["Content-Type", "application/json"]]}>
   <CH.Code>
   ```typescript Create.ts
-  import { SDK } from "openapi";
-import { AuthTokenGrantType, AuthTokenRequestedTokenType, AuthTokenSubjectTokenType } from "openapi/dist/models/components";
+  import { AuthTokenGrantType, AuthTokenRequestedTokenType, AuthTokenSubjectTokenType, SDK } from "devrev/sdk";
 
 (async() => {
   const sdk = new SDK({

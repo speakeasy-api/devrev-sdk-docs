@@ -5,20 +5,19 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   <CH.Code>
   ```python Create.py
   import sdk
-from sdk.models import components
 
 s = sdk.SDK(
     auth_token="",
 )
 
-req = components.AuthTokensCreateRequest(
+req = sdk.AuthTokensCreateRequest(
     aud=[
         'string',
     ],
-    rev_info=components.AuthTokensRevInfo(
-        org_traits=components.AuthTokensOrgTraits(),
-        user_traits=components.AuthTokensUserTraits(
-            custom_fields=components.CustomFields(),
+    rev_info=sdk.AuthTokensRevInfo(
+        org_traits=sdk.AuthTokensOrgTraits(),
+        user_traits=sdk.AuthTokensUserTraits(
+            custom_fields=sdk.CustomFields(),
             phone_numbers=[
                 'string',
             ],

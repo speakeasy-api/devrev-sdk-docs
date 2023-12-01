@@ -6,13 +6,12 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   ```python Create.py
   import dateutil.parser
 import sdk
-from sdk.models import components
 
 s = sdk.SDK(
     auth_token="",
 )
 
-req = components.WorksCreateRequestIssue(
+req = sdk.WorksCreateRequestIssue(
     applies_to_part='PROD-12345',
     artifacts=[
         'ARTIFACT-12345',
@@ -23,13 +22,13 @@ req = components.WorksCreateRequestIssue(
     reported_by=[
         'DEVU-12345',
     ],
-    stage=components.Empty(),
+    stage=sdk.Empty(),
     tags=[
-        components.Empty(),
+        sdk.Empty(),
     ],
     target_close_date=dateutil.parser.isoparse('2023-01-01T12:00:00.000Z'),
     title='string',
-    type=components.WorkType.ISSUE,
+    type=sdk.WorkType.ISSUE,
 )
 
 res = s.works.create(req)

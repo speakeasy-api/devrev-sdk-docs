@@ -5,22 +5,21 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   <CH.Code>
   ```python Update.py
   import sdk
-from sdk.models import components
 
 s = sdk.SDK(
     auth_token="",
 )
 
-req = components.WebhooksUpdateRequest(
-    event_types=components.WebhooksUpdateRequestEventTypes(
+req = sdk.WebhooksUpdateRequest(
+    event_types=sdk.WebhooksUpdateRequestEventTypes(
         add=[
-            components.WebhookEventType.WORK_DELETED,
+            sdk.WebhookEventType.WORK_DELETED,
         ],
         remove=[
-            components.WebhookEventType.WEBHOOK_UPDATED,
+            sdk.WebhookEventType.WEBHOOK_UPDATED,
         ],
         set=[
-            components.WebhookEventType.PART_DELETED,
+            sdk.WebhookEventType.PART_DELETED,
         ],
     ),
     id='don:integration:<partition>:devo/<dev-org-id>:webhook/<webhook-id>',

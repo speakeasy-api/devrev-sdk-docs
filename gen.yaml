@@ -44,11 +44,11 @@ python:
       shared: ""
       webhooks: ""
   inputModelSuffix: input
+  installationURL: https://github.com/speakeasy-sdks/devrev-sample-sdk
   maxMethodParams: 4
   outputModelSuffix: output
   packageName: openapi
   published: true
-  installationURL: https://github.com/speakeasy-sdks/devrev-sample-sdk
 typescript:
   version: 0.2.0
   author: devrev

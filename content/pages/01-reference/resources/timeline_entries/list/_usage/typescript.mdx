@@ -4,8 +4,7 @@ import WithStatusBar from '@/src/components/WithStatusBar';
 <WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
   <CH.Code>
   ```typescript List.ts
-  import { SDK } from "openapi";
-import { ListMode, TimelineEntryVisibility } from "openapi/dist/models/components";
+  import { ListMode, SDK, TimelineEntryVisibility } from "devrev/sdk";
 
 (async() => {
   const sdk = new SDK({

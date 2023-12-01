@@ -5,16 +5,15 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   <CH.Code>
   ```python List.py
   import sdk
-from sdk.models import components, operations
 
 s = sdk.SDK(
     auth_token="",
 )
 
-req = operations.ListTimelineEntriesRequest(
+req = sdk.ListTimelineEntriesRequest(
     object='PROD-12345',
     visibility=[
-        components.TimelineEntryVisibility.INTERNAL,
+        sdk.TimelineEntryVisibility.INTERNAL,
     ],
 )
 

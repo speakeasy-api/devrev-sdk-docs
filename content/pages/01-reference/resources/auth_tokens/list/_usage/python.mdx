@@ -5,14 +5,13 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   <CH.Code>
   ```python List.py
   import sdk
-from sdk.models import components, operations
 
 s = sdk.SDK(
     auth_token="",
 )
 
 
-res = s.auth_tokens.list(client_id='string', requested_token_type=components.AuthTokenRequestedTokenType.URN_DEVREV_PARAMS_OAUTH_TOKEN_TYPE_SYS, subject='string')
+res = s.auth_tokens.list(client_id='string', requested_token_type=sdk.AuthTokenRequestedTokenType.URN_DEVREV_PARAMS_OAUTH_TOKEN_TYPE_SYS, subject='string')
 
 if res.auth_tokens_list_response is not None:
     # handle response

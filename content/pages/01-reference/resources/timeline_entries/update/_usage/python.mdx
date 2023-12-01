@@ -5,16 +5,15 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   <CH.Code>
   ```python Update.py
   import sdk
-from sdk.models import components
 
 s = sdk.SDK(
     auth_token="",
 )
 
-req = components.TimelineEntriesUpdateRequestTimelineComment(
+req = sdk.TimelineEntriesUpdateRequestTimelineComment(
     id='don:core:<partition>:devo/<dev-org-id>:ticket/123:timeline_event/<timeline-event-id>',
-    type=components.SchemasTimelineEntriesUpdateRequestTimelineCommentType.TIMELINE_COMMENT,
-    artifacts=components.TimelineEntriesUpdateRequestTimelineCommentArtifacts(
+    type=sdk.SchemasTimelineEntriesUpdateRequestTimelineCommentType.TIMELINE_COMMENT,
+    artifacts=sdk.TimelineEntriesUpdateRequestTimelineCommentArtifacts(
         add=[
             'ARTIFACT-12345',
         ],
@@ -25,8 +24,8 @@ req = components.TimelineEntriesUpdateRequestTimelineComment(
             'ARTIFACT-12345',
         ],
     ),
-    snap_kit_body=components.TimelineSnapKitBody(
-        body=components.Body(),
+    snap_kit_body=sdk.TimelineSnapKitBody(
+        body=sdk.Body(),
     ),
 )
 
