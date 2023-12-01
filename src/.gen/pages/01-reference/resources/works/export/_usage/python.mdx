@@ -5,13 +5,12 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   <CH.Code>
   ```python Export.py
   import sdk
-from sdk.models import components, operations
 
 s = sdk.SDK(
     auth_token="",
 )
 
-req = operations.ExportWorksRequest(
+req = sdk.ExportWorksRequest(
     applies_to_part=[
         'PROD-12345',
     ],
@@ -19,7 +18,7 @@ req = operations.ExportWorksRequest(
         'DEVU-12345',
     ],
     issue_priority=[
-        components.IssuePriority.P2,
+        sdk.IssuePriority.P2,
     ],
     issue_rev_orgs=[
         'REV-AbCdEfGh',
@@ -40,13 +39,13 @@ req = operations.ExportWorksRequest(
         'REV-AbCdEfGh',
     ],
     ticket_severity=[
-        components.TicketSeverity.BLOCKER,
+        sdk.TicketSeverity.BLOCKER,
     ],
     ticket_source_channel=[
         'string',
     ],
     type=[
-        components.WorkType.ISSUE,
+        sdk.WorkType.ISSUE,
     ],
 )
 

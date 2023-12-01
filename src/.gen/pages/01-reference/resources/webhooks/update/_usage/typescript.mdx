@@ -4,10 +4,9 @@ import WithStatusBar from '@/src/components/WithStatusBar';
 <WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
   <CH.Code>
   ```typescript Update.ts
-  import { SDK } from "openapi";
-import { WebhookEventType, WebhooksUpdateAction } from "openapi/dist/models/components";
+  import { SDK, WebhookEventType, WebhooksUpdateAction } from "devrev/sdk";
 
-(async() => {
+async function run() {
   const sdk = new SDK({
     authToken: "",
   });
@@ -30,7 +29,9 @@ import { WebhookEventType, WebhooksUpdateAction } from "openapi/dist/models/comp
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
   ```
   ---
 

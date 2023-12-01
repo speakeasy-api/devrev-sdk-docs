@@ -1,8 +1,7 @@
 ```typescript Toggle.ts
-import { SDK } from "openapi";
-import { AuthConnectionToggle } from "openapi/dist/models/components";
+import { AuthConnectionToggle, SDK } from "devrev/sdk";
 
-(async() => {
+async function run() {
   const sdk = new SDK({
     authToken: "",
   });
@@ -14,5 +13,7 @@ import { AuthConnectionToggle } from "openapi/dist/models/components";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```

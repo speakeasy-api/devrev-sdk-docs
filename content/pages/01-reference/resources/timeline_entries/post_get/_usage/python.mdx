@@ -5,13 +5,12 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   <CH.Code>
   ```python PostGet.py
   import sdk
-from sdk.models import components
 
 s = sdk.SDK(
     auth_token="",
 )
 
-req = components.TimelineEntriesGetRequest(
+req = sdk.TimelineEntriesGetRequest(
     id='don:core:<partition>:devo/<dev-org-id>:ticket/123:timeline_event/<timeline-event-id>',
 )
 

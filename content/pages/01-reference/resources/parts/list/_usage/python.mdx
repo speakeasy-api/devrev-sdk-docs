@@ -5,13 +5,12 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   <CH.Code>
   ```python List.py
   import sdk
-from sdk.models import components, operations
 
 s = sdk.SDK(
     auth_token="",
 )
 
-req = operations.ListPartsRequest(
+req = sdk.ListPartsRequest(
     created_by=[
         'DEVU-12345',
     ],
@@ -25,7 +24,7 @@ req = operations.ListPartsRequest(
         'PROD-12345',
     ],
     type=[
-        components.PartType.PRODUCT,
+        sdk.PartType.PRODUCT,
     ],
 )
 

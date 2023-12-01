@@ -5,13 +5,12 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   <CH.Code>
   ```python Update.py
   import sdk
-from sdk.models import components
 
 s = sdk.SDK(
     auth_token="",
 )
 
-req = components.RevOrgsUpdateRequest(
+req = sdk.RevOrgsUpdateRequest(
     id='REV-AbCdEfGh',
 )
 

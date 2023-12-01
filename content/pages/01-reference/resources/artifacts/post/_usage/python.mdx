@@ -6,13 +6,12 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   ```python Post.py
   import dateutil.parser
 import sdk
-from sdk.models import components
 
 s = sdk.SDK(
     auth_token="",
 )
 
-req = components.ArtifactsLocateRequest(
+req = sdk.ArtifactsLocateRequest(
     id='ARTIFACT-12345',
     version=dateutil.parser.isoparse('2023-01-01T12:00:00.000Z'),
 )

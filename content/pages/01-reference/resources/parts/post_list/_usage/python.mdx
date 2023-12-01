@@ -5,13 +5,12 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   <CH.Code>
   ```python PostList.py
   import sdk
-from sdk.models import components
 
 s = sdk.SDK(
     auth_token="",
 )
 
-req = components.PartsListRequest(
+req = sdk.PartsListRequest(
     created_by=[
         'DEVU-12345',
     ],
@@ -21,13 +20,13 @@ req = components.PartsListRequest(
     owned_by=[
         'DEVU-12345',
     ],
-    parent_part=components.ParentPartFilter(
+    parent_part=sdk.ParentPartFilter(
         parts=[
             'PROD-12345',
         ],
     ),
     type=[
-        components.PartType.ENHANCEMENT,
+        sdk.PartType.ENHANCEMENT,
     ],
 )
 

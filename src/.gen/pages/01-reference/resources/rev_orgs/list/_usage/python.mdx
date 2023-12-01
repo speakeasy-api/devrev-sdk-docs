@@ -6,13 +6,12 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   ```python List.py
   import dateutil.parser
 import sdk
-from sdk.models import components, operations
 
 s = sdk.SDK(
     auth_token="",
 )
 
-req = operations.ListRevOrgsRequest(
+req = sdk.ListRevOrgsRequest(
     created_by=[
         'string',
     ],

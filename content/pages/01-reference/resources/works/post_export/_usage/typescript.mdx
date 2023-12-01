@@ -4,10 +4,9 @@ import WithStatusBar from '@/src/components/WithStatusBar';
 <WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
   <CH.Code>
   ```typescript PostExport.ts
-  import { SDK } from "openapi";
-import { IssuePriority, TicketSeverity, WorkType } from "openapi/dist/models/components";
+  import { IssuePriority, SDK, TicketSeverity, WorkType } from "devrev/sdk";
 
-(async() => {
+async function run() {
   const sdk = new SDK({
     authToken: "",
   });
@@ -66,7 +65,9 @@ import { IssuePriority, TicketSeverity, WorkType } from "openapi/dist/models/com
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
   ```
   ---
 

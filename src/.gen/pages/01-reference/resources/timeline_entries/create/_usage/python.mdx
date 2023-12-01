@@ -6,24 +6,23 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   ```python Create.py
   import dateutil.parser
 import sdk
-from sdk.models import components
 
 s = sdk.SDK(
     auth_token="",
 )
 
-req = components.TimelineEntriesCreateRequestTimelineComment(
+req = sdk.TimelineEntriesCreateRequestTimelineComment(
     expires_at=dateutil.parser.isoparse('2023-01-01T12:00:00.000Z'),
     object='PROD-12345',
     private_to=[
         'DEVU-12345',
     ],
-    type=components.SchemasTimelineEntriesCreateRequestTimelineCommentType.TIMELINE_COMMENT,
+    type=sdk.SchemasTimelineEntriesCreateRequestTimelineCommentType.TIMELINE_COMMENT,
     artifacts=[
         'ARTIFACT-12345',
     ],
-    snap_kit_body=components.TimelineSnapKitBody(
-        body=components.Body(),
+    snap_kit_body=sdk.TimelineSnapKitBody(
+        body=sdk.Body(),
     ),
 )
 

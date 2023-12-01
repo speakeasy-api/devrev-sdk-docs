@@ -6,20 +6,19 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   ```python Update.py
   import dateutil.parser
 import sdk
-from sdk.models import components
 
 s = sdk.SDK(
     auth_token="",
 )
 
-req = components.SchemasEmptyEmpty1(
+req = sdk.SchemasEmptyEmpty1(
     applies_to_part='PROD-12345',
-    artifacts=components.Empty(),
+    artifacts=sdk.Empty(),
     id='ISS-12345',
-    owned_by=components.Empty(),
-    reported_by=components.Empty(),
-    stage=components.Empty(),
-    tags=components.Empty(),
+    owned_by=sdk.Empty(),
+    reported_by=sdk.Empty(),
+    stage=sdk.Empty(),
+    tags=sdk.Empty(),
     target_close_date=dateutil.parser.isoparse('2023-01-01T12:00:00.000Z'),
 )
 

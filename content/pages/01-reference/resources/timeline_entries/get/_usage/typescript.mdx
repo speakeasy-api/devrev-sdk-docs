@@ -4,10 +4,9 @@ import WithStatusBar from '@/src/components/WithStatusBar';
 <WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
   <CH.Code>
   ```typescript Get.ts
-  import { SDK } from "openapi";
-import { GetTimelineEntriesRequest } from "openapi/dist/models/operations";
+  import { GetTimelineEntriesRequest, SDK } from "devrev/sdk";
 
-(async() => {
+async function run() {
   const sdk = new SDK({
     authToken: "",
   });
@@ -18,7 +17,9 @@ const id: string = "don:core:<partition>:devo/<dev-org-id>:ticket/123:timeline_e
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
   ```
   ---
 

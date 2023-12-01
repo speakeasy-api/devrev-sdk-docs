@@ -4,10 +4,9 @@ import WithStatusBar from '@/src/components/WithStatusBar';
 <WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
   <CH.Code>
   ```typescript PostList.ts
-  import { SDK } from "openapi";
-import { ListMode, UserState } from "openapi/dist/models/components";
+  import { ListMode, SDK, UserState } from "devrev/sdk";
 
-(async() => {
+async function run() {
   const sdk = new SDK({
     authToken: "",
   });
@@ -27,7 +26,9 @@ import { ListMode, UserState } from "openapi/dist/models/components";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
   ```
   ---
 
