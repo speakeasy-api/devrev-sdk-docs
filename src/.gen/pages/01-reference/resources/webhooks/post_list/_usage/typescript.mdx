@@ -6,7 +6,7 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   ```typescript PostList.ts
   import { SDK } from "devrev/sdk";
 
-(async() => {
+async function run() {
   const sdk = new SDK({
     authToken: "",
   });
@@ -16,7 +16,9 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
   ```
   ---
 

@@ -2,8 +2,8 @@ configVersion: 1.0.0
 management:
   docChecksum: 9a3a851ec2163b65c3a3097c1065ae85
   docVersion: "2022-10-20"
-  speakeasyVersion: 1.123.0
-  generationVersion: 2.202.2
+  speakeasyVersion: 1.124.3
+  generationVersion: 2.207.1
 generation:
   comments: {}
   sdkClassName: SDK
@@ -12,13 +12,13 @@ generation:
     optionalPropertyRendering: withExample
 features:
   docs:
-    core: 1.10.1
+    core: 1.13.0
     globalSecurity: 0.1.0
     globalServerURLs: 0.1.1
     groups: 0.1.1
     nameOverrides: 0.1.0
 docs:
-  version: 0.1.0
+  version: 0.2.0
   imports:
     option: openapi
     paths:

@@ -1,7 +1,7 @@
 ```typescript Toggle.ts
 import { AuthConnectionToggle, SDK } from "devrev/sdk";
 
-(async() => {
+async function run() {
   const sdk = new SDK({
     authToken: "",
   });
@@ -13,5 +13,7 @@ import { AuthConnectionToggle, SDK } from "devrev/sdk";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```

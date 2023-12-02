@@ -6,7 +6,7 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   ```typescript Get.ts
   import { GetWebhooksRequest, SDK } from "devrev/sdk";
 
-(async() => {
+async function run() {
   const sdk = new SDK({
     authToken: "",
   });
@@ -17,7 +17,9 @@ const id: string = "don:integration:<partition>:devo/<dev-org-id>:webhook/<webho
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
   ```
   ---
 
